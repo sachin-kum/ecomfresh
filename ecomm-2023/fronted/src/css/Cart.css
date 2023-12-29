@@ -1,0 +1,551 @@
+@import "https://unpkg.com/open-props";
+button {
+  font: inherit;
+}
+.page__main {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.cntry-select {
+  padding: 11px;
+  border: 0;
+}
+.cntry-select:focus-visible {
+  border: 0 !important;
+  outline: none !important;
+}
+.state-slct {
+  padding: 11px;
+  border: 0;
+  width: 100%;
+}
+.state-slct:focus-visible {
+  border: 0 !important;
+  outline: none !important;
+}
+.page {
+  display: grid;
+  grid-template-areas: "main";
+  color: var(--gray-9);
+  background-color: var(--gray-0);
+  min-height: 100vh;
+  font-family: var(--font-sans);
+}
+.page__main {
+  grid-area: main;
+}
+
+.main {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding: var(--size-3);
+}
+
+.form {
+  width: 100%;
+}
+.form__cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-6);
+}
+@media screen and (min-width: 48em) {
+  .form__cards {
+    flex-direction: row;
+  }
+}
+.form__main-card {
+  display: grid;
+  order: 2;
+  color: var(--gray-9);
+  background-color: var(--gray-3);
+  padding: var(--size-4);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-2);
+  overflow: hidden;
+}
+@media screen and (min-width: 48em) {
+  .form__main-card {
+    order: initial;
+    flex: 1;
+  }
+}
+.form__main-content {
+  gap: var(--size-3);
+}
+@media screen and (min-width: 48em) {
+  .form__main-content {
+    gap: initial;
+  }
+}
+.form__title {
+  margin-bottom: var(--size-6);
+  font-size: var(--font-size-4);
+}
+.form__linput {
+  display: grid;
+  gap: var(--size-3);
+  margin-bottom: var(--size-3);
+}
+.form__txt-label {
+  display: flex;
+  align-items: center;
+  gap: var(--size-1);
+}
+.form__txt-input {
+  width: 100%;
+  height: 3rem;
+  padding-inline: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-2);
+  box-sizing: border-box;
+}
+.form__checkbox-label {
+  margin-block: var(--size-3) var(--size-4);
+}
+.form__brand-cards {
+  height: 3rem;
+  display: flex;
+  gap: var(--size-2);
+  align-items: center;
+  font-size: var(--font-size-4);
+}
+.form__row {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 36em) {
+  .form__row {
+    gap: var(--size-4);
+    flex-direction: row;
+  }
+}
+.form__col {
+  flex: 1;
+}
+@media screen and (min-width: 48em) {
+  .form__cart {
+    flex: 0.4;
+    height: max-content;
+  }
+}
+.form__cc-visa {
+  color: #000080;
+}
+.form__cc-amex {
+  color: #0000ff;
+}
+.form__cc-mastercard {
+  color: #ff0000;
+}
+.form__cc-discover {
+  color: #ffa500;
+}
+
+.cart {
+  color: var(--gray-9);
+  background-color: var(--gray-3);
+  padding-inline: var(--size-1);
+  padding-block: var(--size-4);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-2);
+  overflow: hidden;
+}
+.cart__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--size-5);
+  padding-inline: var(--size-4);
+  font-size: var(--font-size-3);
+}
+.cart__list {
+  display: grid;
+  gap: var(--size-4);
+  padding-bottom: var(--size-6);
+  border-bottom: 2px solid var(--gray-5);
+}
+.cart__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: var(--size-4);
+}
+.cart__item-price {
+  color: var(--gray-6);
+}
+.cart__link {
+  color: var(--blue-5);
+  text-decoration-color: var(--gray-5);
+  text-underline-offset: var(--size-2);
+}
+.cart__link:hover {
+  color: var(--blue-3);
+}
+.cart__total-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--size-1);
+  font-weight: var(--font-weight-6);
+}
+.cart__total-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: var(--size-4) var(--size-3);
+  padding-inline: var(--size-4);
+}
+.cart__total-price-value {
+  font-weight: var(--font-weight-6);
+}
+
+.primary-btn {
+  transition: 180ms ease-in-out;
+  color: var(--gray-0);
+  background-color: var(--gray-9);
+  border: 0;
+  border-radius: var(--radius-2);
+  padding: var(--size-3);
+  cursor: pointer;
+}
+.primary-btn:hover {
+  background-color: var(--gray-7);
+}
+.user-shipi-info {
+  display: flex;
+  justify-content: space-between;
+}
+.payment-proceed-box {
+  border-top: 1px solid rgb(47, 45, 45);
+  border-bottom: 1px solid rgb(47, 45, 45);
+  padding: 20px 0;
+}
+.proceed-row {
+  display: flex;
+  justify-content: space-between;
+}
+.order-proces-main {
+  padding: 0 40px;
+}
+.payment-procees-btn {
+  border: 0;
+  border-radius: 30px !important;
+  width: 80%;
+  background-color: #000080;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+}
+/* .paymentContainer {
+  max-width: 500px;
+  margin: auto;
+  height: 500px;
+} */
+.credit-card-form {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 35%;
+  max-width: 400px;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.1);
+  font-family: "Montserrat", sans-serif;
+  background-color: #dbdbdb;
+  text-align: center;
+  color: #424242;
+  align-content: center;
+}
+
+.credit-card-form h2 {
+  font-size: 24px;
+}
+
+.credit-card-form .form-group {
+  margin-bottom: 15px;
+}
+
+.credit-card-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #777;
+}
+
+.credit-card-form input[type="text"],
+.credit-card-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.credit-card-form .form-row {
+  /* display: flex; */
+}
+
+.credit-card-form button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background-color: #585858;
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+.credit-card-form button[type="submit"]:hover {
+  background-color: #808080;
+  color: #424242;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.1);
+}
+
+.credit-card-form button[type="submit"]:focus {
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+.paymentInput {
+  background: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.funds-success-message-container {
+  font-family: Roboto, "Segoe UI", "Helvetica Neue", sans-serif !important;
+  color: #333;
+  margin-top: 100px;
+  max-width: 500px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  height: 70vh;
+}
+
+.funds-checkmark-text-container {
+  display: block;
+  width: auto !important;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.funds-checkmark-container {
+  height: 40px;
+  padding: 0 4px 0 0px;
+  display: inline-block;
+  width: 70px;
+  margin: 0 auto;
+}
+
+.funds-checkmark-container:after {
+  clear: both;
+}
+
+.funds-success-done-text {
+  vertical-align: middle;
+  margin: 0;
+  padding: 15px 0 0 0;
+  display: inline;
+}
+
+.funds-success-message {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.funds-success-message h2 {
+  margin-top: 0px;
+}
+
+.funds-success-message-container h1,
+h2 {
+  font-weight: 700;
+  margin-top: 0px;
+}
+
+.funds-success-message-container h1 {
+  font-size: 28pt;
+  margin-top: 45px;
+}
+
+.funds-success-message-container h2 {
+  font-size: 18pt;
+  margin-top: 25px;
+}
+
+.funds-success-message-container p {
+  font-size: 12pt;
+  padding-bottom: 1em;
+  line-height: 27.2px;
+}
+
+/* CHECKMARK */
+.funds-checkmark-circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+  stroke: #33bb11;
+  fill: none;
+  -webkit-animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.funds-checkmark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 5;
+  stroke: #ffffff;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  -webkit-box-shadow: inset 0px 0px 0px #33bb11;
+  box-shadow: inset 0px 0px 0px #33bb11;
+  -webkit-animation: fill 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+  animation: fill 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+}
+
+.funds-checkmark-check {
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  -webkit-animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+.funds-display-on-ie {
+  display: none;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .funds-display-on-ie {
+    display: block;
+  }
+
+  .funds-checkmark {
+    display: none;
+  }
+
+  .funds-ie-checkmark-circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 5;
+    stroke-miterlimit: 10;
+    stroke: #33bb11;
+    fill: none;
+    -webkit-animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  }
+
+  .funds-ie-checkmark {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 5;
+    stroke: #ffffff;
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    -webkit-box-shadow: inset 0px 0px 0px #33bb11;
+    box-shadow: inset 0px 0px 0px #33bb11;
+    -webkit-animation: fill 0.4s ease-in-out 0.4s forwards,
+      scale 0.3s ease-in-out 0.9s both;
+    animation: fill 0.4s ease-in-out 0.4s forwards,
+      scale 0.3s ease-in-out 0.9s both;
+  }
+
+  .funds-ie-checkmark-check {
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  }
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes scale {
+  0%,
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+  50% {
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes scale {
+  0%,
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+  50% {
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@-webkit-keyframes fill {
+  100% {
+    -webkit-box-shadow: inset 0px 0px 0px 30px #33bb11;
+    box-shadow: inset 0px 0px 0px 30px #33bb11;
+  }
+}
+
+@keyframes fill {
+  100% {
+    -webkit-box-shadow: inset 0px 0px 0px 30px #33bb11;
+    box-shadow: inset 0px 0px 0px 30px #33bb11;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .funds-checkmark-text-container {
+    display: block;
+  }
+  .funds-checkmark-container {
+    height: auto;
+    padding: 0;
+    display: block;
+    width: 100%;
+  }
+}
+
+.funds-success-message p {
+  background: #4692d3;
+  font-weight: bold;
+  color: white;
+  padding: 8px 53px;
+  border-radius: 20px;
+  margin-top: 26px;
+}
